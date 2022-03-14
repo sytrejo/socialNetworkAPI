@@ -1,0 +1,26 @@
+{
+"scripts": {
+    "start": "node server.js"
+  },
+  "name": "socialnetworkapi",
+  "description": "",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sytrejo/socialNetworkAPI.git"
+  },
+  "author": "Silvia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sytrejo/socialNetworkAPI/issues"
+  },
+  "homepage": "https://github.com/sytrejo/socialNetworkAPI#readme",
+
+  "dependencies": {
+    "express": "^4.17.3",
+    "moment": "^2.29.1",
+    "mongoose": "^6.2.6"
+  }
+}
