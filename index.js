@@ -1,30 +1,17 @@
-// Require express and Mongoose
 const express = require('express');
-const mongoose = require('mongoose');
+const db = require('./config/connection');
+const routes = require('./routes');
 
-// Creating the connection to the PORT and Express
+const PORT = process.env.PORT || 3001;
 const app = express();
-const PORT = process.env.PORT || 27017;
 
+
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.urlencoded({extended: true}));
-app.use(express.static('public'));
+app.use(routes);
 
-
-app.use(require('./routes'));
-
-
-// look at these snippets https://www.tabnine.com/code/javascript/functions/mongoose/connect
-
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/socialNetworkAPI', {
-    useFindAndModify: false,
-    useNewUrlParser: true,
-    useUnifiedTopology: true
+db.once('open', () => {
+  app.listen(PORT, () => {
+    console.log(`API server for social network api running on port ${PORT}!`);
+  });
 });
-
-// Use this to log mongo queries being executed
-mongoose.set('debug', true);
-
-
-// initiate the server on the local host
-app.listen(PORT, () => console.log(`Connected to localhost: ${PORT}`));
