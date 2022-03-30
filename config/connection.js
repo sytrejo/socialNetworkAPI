@@ -1,11 +1,12 @@
-const { connect, connection } = require (' mongoose ');
 
-//Don't forget to add Atlas connection in Heroku as a config variable
-const connectionString = process.env.MONGODB_URI || 'mongodb://localhost:27017/socialNetworkAPIDB';
+const { connect, connection } = require('mongoose');
+
+const connectionString =
+  process.env.MONGODB_URI || 'mongodb://localhost:27017/socialNetworkDB';
 
 connect(connectionString, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
 });
 
-module.export = connection;
+module.exports = connection;
