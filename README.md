@@ -3,7 +3,7 @@
 1. [Description](#Description)
 2. [Usage](#Usage)
 3. [Deployment](#Deployment)
-4. [Screenshots](#Screenshots)
+
 
 ## Description
 
@@ -16,11 +16,5 @@ Download the code. Open a terminal. In the terminal type npm i to install the de
 
 ## Deployment
 Repo Link: [Github Repo](https://github.com/sytrejo/socialNetworkAPI)
-Video Link: [Google Drive]()
+Video Link: [Google Drive](https://drive.google.com/file/d/1iuUVgfF9WZ1jCfRV7yHrSFOxzV5DlfR2/view?usp=sharing)
 
-## Screenshots
-
-![Picture 1]()
-![Picture 2]()
-![Picture 3]()
-![Picture 4]()
